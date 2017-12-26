@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ThreadLocal的典型用法
-date: 2017-7-19
+date: 2017-12-27
 categories: blog
 tags: [java,多线程,ThreadLocal]
 description: 
