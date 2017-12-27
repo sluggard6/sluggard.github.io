@@ -1,4 +1,11 @@
-#记一个springboot+dubbo的错误
+---
+layout: post
+title: 记一个springboot+dubbo的错误
+date: 2017-12-27
+categories: blog
+tags: [dubbo,springboot]
+description: 
+---
 
 今天搭建一个springboog+dubbo.consumer+zookeeper的服务,很简单的一个框架,但是就是拿不到远程服务,报下面的错误
 ```
