@@ -170,7 +170,7 @@
 - rpc: dubbo/thrift/zookeeper
 - 前端技术：Bootstrap/React-native
 - 数据库：MySQL
-- 版本管理、文档和自动化部署工具：Svn/Git/Jenkins/Fabfile
+- 版本管理、文档和自动化部署工具：Svn/Git/Jenkins/Fabric
 
 
 ---
