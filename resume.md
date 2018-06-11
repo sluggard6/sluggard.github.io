@@ -21,7 +21,28 @@
 
 ## 工作经历
 
-### 上海金互行金融信息服务有限 （ 2017年10月 ~ 至今 ）
+### 上海若灵软件技术有限公司 （ 2018年2月 ~ 至今 ）
+
+#### 职位
+* 技术经理
+#### 工作职责
+* 负责项目的架构设计
+* 带领团队负责核心模块的开发
+#### 项目介绍
+
+#### rightbtc
+* 项目简介：数字货币交易所
+* 技术栈：spring-boot,kafka,redis,mysql
+* 技术特点：数字货币，区块链
+* 工作职责：完全重构了交易所的用户系统，风控系统，权限模型和钱包系统，
+
+#### 量化平台
+* 项目简介：基于数字货币
+* 技术栈：python,lib3,flask，spring-boot,xchange,quartz，websocket
+* 技术特点：数字货币，量化交易
+* 工作职责：编写量化交易策略，辅助交易所进行交易,一周内，把交易所交易量排名从100名提升到30名，并保持。
+
+### 上海金互行金融信息服务有限 （ 2017年10月 ~ 2018年2月 ）
 
 #### 职位
 * java技术经理
@@ -165,9 +186,9 @@
 以下均为我熟练使用的技能
 
 - 开发语言：java/python/golang
-- Web框架：spring/flask/beego
+- Web框架：springMvc/flask/beego
 - 缓存技术： redis/memcached
-- rpc: dubbo/thrift/zookeeper
+- rpc: dubbo/thrift
 - 前端技术：Bootstrap/React-native
 - 数据库：MySQL
 - 版本管理、文档和自动化部署工具：Svn/Git/Jenkins/Fabric
