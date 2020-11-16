@@ -19,8 +19,22 @@
 ---
 
 ## 工作经历
+### 上海悦商科技有限公司 （ 2020年2月 ~  至今）
+#### 职位
+* 架构师
+#### 工作职责
+* 迅速接手旧代码，解决原始代码的一系列问题的同时，基于原有架构，设计新的组件满足开发需求
+* 负责新的开发人员的技术培训
+* 负责人事招募和团队规划
 
-### 上海艾列特软件技术有限公司 （ 2018年2月 ~ 至今 ）
+#### 项目介绍
+##### 宝龙地产项目
+* 项目简介：公司最大客户宝龙地产集团的内部信息管理系统的维护与开发
+* 技术栈：spring-boot,kafka,redis,oracle,mybatis
+* 技术特点：ERP，工作流
+* 工作职责：负责项目中核心的财务模块的维护和二次开发，由于整个项目的维护时间已经超过十年，并经历了多次迭代，要在原始代码持续正常运行的情况下，设计新的架构解决原本设计的局限性并满足新的开发需求。
+
+### 上海艾列特软件技术有限公司 （ 2018年2月 ~ 2020年1月 ）
 
 #### 职位
 * 架构师
@@ -33,13 +47,13 @@
 
 #### elitex.io
 * 项目简介：数字货币交易所
-* 技术栈：spring-boot,kafka,redis,mysql
+* 技术栈：spring-boot,rabitmq,redis,mysql,dubbo,zookeeper,docker,swarm
 * 技术特点：数字货币，区块链
-* 工作职责：带领团队开发了完整的数字货币交易所系统并准时上线，可以支持超过每秒万次用户交易。
+* 工作职责：带领团队开发了完整的数字货币交易所系统，解决了过程中很多技术困难，达成了超过每秒万单以上用户安全交易的技术指标，并准时上线。
 
 #### 量化平台
 * 项目简介：基于高频金融交易的操控平台，根据操盘手的需求，整合市场信息，并根据操盘手提出的策略进行自动交易。
-* 技术栈：python,lib3,flask，spring-boot,xchange,quartz，websocket
+* 技术栈：python,lib3,flask，spring-boot,xchange,quartz，websocket, rxjava, spring-cloud
 * 技术特点：数字货币，量化交易
 * 工作职责：搭建交易信息平台，开发交易策略。完整实现了摆单，画线，搬盘口，套利等核心功能。形成了一套完整的数字货币交易所运营套利工具。
 
@@ -47,7 +61,7 @@
 ### 上海藤榕信息科技有限公司 （ 2016年10月 ~ 2018年2月 ）
 
 #### 职位
-* 高级软件工程师
+* 架构师
 #### 工作内容
 * 独立项目负责人，带领技术团队完成平台整体搭建，设计、指导关键技术模块，并对项目进度和软件质量负责，确保公司产品的研发进度和质量；
 * 组织编制、审核各类技术方案、规范和文档，保证技术成果质量；
@@ -149,11 +163,13 @@
 # 技能清单
 以下均为我熟练使用的技能
 
-- 开发语言：java/python/golang
-- Web框架：springMvc/flask/beego
-- 缓存技术：redis/memcached
-- 微服务: dubbo/thrift/srpingCloud
-- 数据库：MySQL Oracle
+- 开发语言：java/python/golang/Linux Shell
+- 常用中间件-java：spring全家桶/mybatis/netty/rxjava/zookeeper
+- 缓存技术： redis/memcached
+- rpc: dubbo/thrift
+- 消息队列：kafka/rabbitmq
+- 前端技术：Bootstrap/React-native
+- 数据库：MySQL/Oracle
 - 版本管理、文档和自动化部署工具：Svn/Git/Jenkins/Fabric
 
 
