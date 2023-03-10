@@ -12,8 +12,11 @@ description:
 ## 前置说明
 - 文中服务器操作系统为ubuntu22.04
 - 所有机器已安装docker-engine
+- 使用containerd替换了docker
+- k8s版本为1.26.2
 
 ***
+
 ## 安装容器运行时(CRI)
 
 ### 转发IPv4并让iptables看到桥接流量
@@ -68,7 +71,7 @@ Cgroup Driver: systemd
   cgroupns
 
 ```
-
+<div style='display: none'>用containerd更换了docker-engine，下面一段不再使用</div>
 #### 安装cri-dockerd
 
 - 下载代码并使用docker建立golang编译环境
@@ -104,6 +107,77 @@ sudo systemctl daemon-reload
 sudo systemctl enable cri-docker.service
 sudo systemctl enable --now cri-docker.socket
 ```
+#### 安装containerd
+
+- 下载安装containerd
+
+```
+wget https://github.com/containerd/containerd/releases/download/v1.6.19/containerd-1.6.19-linux-amd64.tar.gz
+sudo tar Cxzvf /usr/local containerd-1.6.19-linux-amd64.tar.gz
+bin/
+bin/containerd-shim-runc-v2
+bin/containerd-shim
+bin/ctr
+bin/containerd-shim-runc-v1
+bin/containerd
+bin/containerd-stress
+```
+
+- 生成配置文件
+
+```
+sudo mkdir -p /etc/containerd
+sudo containerd config default > config.toml
+sudo mv config.toml /etc/containerd/
+```
+
+- 修改配置文件
+
+
+```
+[plugins."io.containerd.grpc.v1.cri".containerd.runtimes]
+  ...
+
+  [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
+    ...
+    [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
+      ...
+      SystemdCgroup = true
+```
+
+- 安装runc
+
+
+```
+wget https://github.com/opencontainers/runc/releases/download/v1.1.4/runc.amd64
+install -m 755 runc.amd64 /usr/local/sbin/runc
+```
+
+- 安装cni-plugins
+
+```
+wget https://github.com/containernetworking/plugins/releases/download/v1.2.0/cni-plugins-linux-amd64-v1.2.0.tgz
+mkdir -p /opt/cni/bin
+tar Cxzvf /opt/cni/bin cni-plugins-linux-amd64-v1.2.0.tgz
+```
+
+- 安装containerd服务
+
+```
+wget https://raw.githubusercontent.com/containerd/containerd/main/containerd.service
+mkdir -p /usr/local/lib/systemd/system/
+cp containerd.service /usr/local/lib/systemd/system/
+systemctl daemon-reload
+systemctl enable --now containerd
+```
+
+#### 安装nerdctl
+
+```
+wget https://github.com/containerd/nerdctl/releases/download/v1.2.1/nerdctl-full-1.2.1-linux-amd64.tar.gz
+```
+
+
 ***
 ## 阿里云源安装kubeadm
 
