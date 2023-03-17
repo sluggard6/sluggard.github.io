@@ -175,6 +175,25 @@ systemctl enable --now containerd
 
 ```
 wget https://github.com/containerd/nerdctl/releases/download/v1.2.1/nerdctl-full-1.2.1-linux-amd64.tar.gz
+tar Cxzvvf /usr/local nerdctl-full-1.2.1-linux-amd64.tar.gz
+### rootless 前置 一下命令用非root用户执行
+sudo loginctl enable-linger $(whoami)
+systemctl --user is-active dbus
+active
+
+sudo apt install -y dbus-user-session
+systemctl --user start dbus
+sudo apt install -y uidmap
+
+# 安装命令
+containerd-rootless-setuptool.sh install
+
+# 设置默认命名空间
+sudo mkdir -p /etc/nerdctl
+vim /etc/nerdctl/nerdctl.toml
+
+# 增加以下内容
+namespace = "k8s.io"
 ```
 
 
