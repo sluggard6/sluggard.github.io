@@ -22,3 +22,8 @@ docker run -d -p 3306:3306 -v /data/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASS
 
 ### 安装redis
 docker run -d -p 6379:6379 redis --requirepass "password"
+
+
+### jenkins
+
+docker run -p 8081:8080 -p 50000:50000 -v /data/jenkins/jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker --name jenkins -e JENKINS_OPTS="--prefix=/jenkins" -d jenkins/jenkins:lts-jdk11
