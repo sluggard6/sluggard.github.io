@@ -16,4 +16,5 @@ https://github.com/debauchee/barrier #barrier forked from https://github.com/sym
 https://github.com/dromara/tianai-captcha #新的验证码工具，仍然在更新中
 https://casaos.io/ #好用的linux云控平台
 https://github.com/firemakergk/aquar-build-helper #个人搭建开源nas的方案
+https://www.fnnas.com/ #一个好用的nas系统，待测试
 ```
